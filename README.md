@@ -13,18 +13,22 @@
 
 ###必要的字体文件
 
-- Times New Roman    PostScript名称：TimesNewRomanPSMT   
-- Arial              PostScript名称：ArialMT  
-- Courier New        PostScript名称：CourierNewPSMT  
-- 宋体               PostScript名称：SimSun  
-- 黑体               PostScript名称：SimHei  
-- 仿宋               PostScript名称：FangSong  
+字体 | PostScript名称 
+------------ | ------------- 
+Times New Roman | TimesNewRomanPSMT  
+Arial | ArialMT
+Courier New | CourierNewPSMT
+宋体 | SimSun
+黑体 | SimHei
+仿宋 | FangSong
+
 
 **需要生成封皮的还需要自行下载安装**  
 
-方正小标宋           PostScript名称:FZXBSJW–GB1-0
+- 方正小标宋           PostScript名称:FZXBSJW–GB1-0
 
 ###必要的宏包
+
 **全部都是TeX Live自带的**
 - ctexbook
 - geometry
