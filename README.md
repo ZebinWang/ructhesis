@@ -13,15 +13,16 @@
 
 ###必要的字体文件
 
-- Times New Roman  PostScript名称：TimesNewRomanPSMT   
-- Arial PostScript名称：ArialMT  
-- Courier New  PostScript名称：CourierNewPSMT  
-- 宋体  PostScript名称：SimSun  
-- 黑体  PostScript名称：SimHei  
-- 仿宋  PostScript名称：FangSong  
+- Times New Roman    PostScript名称：TimesNewRomanPSMT   
+- Arial              PostScript名称：ArialMT  
+- Courier New        PostScript名称：CourierNewPSMT  
+- 宋体               PostScript名称：SimSun  
+- 黑体               PostScript名称：SimHei  
+- 仿宋               PostScript名称：FangSong  
 
 **需要生成封皮的还需要自行下载安装**  
-方正小标宋字体 PostScript名称:FZXBSJW–GB1-0
+
+方正小标宋           PostScript名称:FZXBSJW–GB1-0
 
 ###必要的宏包
 **全部都是TeX Live自带的**
@@ -50,5 +51,6 @@
 
 ###联系  
 如果模板本身的问题可以上[GitHub](https://github.com/ZebinWang/ructhesis)上发一篇issue。   
-如果想贡献代码的请联系我<email:me@zebinwang.com>
+
+如果想贡献代码的请email我: <me@zebinwang.com> 
 
