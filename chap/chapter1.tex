@@ -1,0 +1,43 @@
+\chapter{\LaTeX{} 介绍}
+%\section{安装\LaTeX{} }
+%\subsection{Mac OS X}
+%\begin{figure}[htbp]
+%\centering\includegraphics[width=5cm,height=1.32cm]{figures/Logo_2.pdf}
+%\caption[示意图]{用LaTeX画图}
+%\end{figure}
+\LaTeX\footnote{https://zh.wikipedia.org/wiki/LaTeX}（英语发音：/ˈleɪtɛk/ lay-tek或英语发音：/ˈlɑːtɛk/ lah-tek，音译“拉泰赫”），文字形式写作\LaTeX\cite{lamport1994latex}，是一种基于\TeX\ 的排版系统，由美国电脑学家莱斯利·兰伯特在20世纪80年代初期开发，利用这种格式，即使用户没有排版和程序设计的知识也可以充分发挥由\TeX\ 所提供的强大功能，能在几天，甚至几小时内生成很多具有书籍质量的印刷品。对于生成复杂表格和数学公式，这一点表现得尤为突出。因此它非常适用于生成高印刷质量的科技和数学类文档。这个系统同样适用于生成从简单的信件到完整书籍的所有其他种类的文档。
+
+\LaTeX\ 使用\TeX\ 作为它的格式化引擎，当前的版本是\LaTeX 2ε。
+\begin{figure}[htbp]
+\centering
+\subfigure[国际象棋]{ 
+	\label{fig:mini:subfig:a} %% label for first subfigure 
+	\begin{minipage}[b]{0.5\textwidth} 
+	\centering 
+	\fenboard{%
+	r5k1/%
+	1b1p1ppp/%
+	p7/%
+	1p1Q4/%
+	2p1r3/%
+	PP4Pq/%
+	BBP2b1P/%
+	R4R1K w - - 0 20}
+	\mbox{}\showboard
+	\end{minipage}}% 
+\subfigure[化学式]{
+	\label{fig:mini:subfig:b} %% label for second subfigure 
+	\begin{minipage}[b]{0.5\textwidth} 
+	\centering 
+      	\chemfig{
+ 	H_3C-[:72]{\color{blue}N}*5(- 
+	*6(-(={\color{red}O})-
+	{\color{blue}N}(-CH_3)-
+	(={\color{red}O})-
+	{\color{blue}N}(-CH_3)-=)--
+	{\color{blue}N}=-)}
+   	 \end{minipage}} 
+\caption{\LaTeX\ 绘图示例} 
+\label{fig:mini:subfig} %% label for entire figure 
+\end{figure}
+

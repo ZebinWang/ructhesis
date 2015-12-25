@@ -1,0 +1,50 @@
+\chapter{\RUCThesis\ 介绍}
+\RUCThesis\ 是我在学校本科和研究生规定（虽然大部分时间都在迎合这基于word的规定）的基础上写出来的。\par
+\begin{figure}[htbp]
+\centering
+\tikzstyle{every node}=[anchor=west]
+\begin{tikzpicture}[%
+  grow via three points={one child at (0.5,-0.7) and
+  two children at (0.5,-0.7) and (0.5,-1.4)},
+  edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
+  \node {\RUCThesis\ }
+child { node {chap}
+    	child { node {chapter1.tex\quad \% 章节文件}}
+      	child { node {...}}
+      	child { node {appendix\_{}1.tex\quad \% 附录}}} 
+child [missing] {} 
+child [missing] {} 
+child [missing] {}
+child { node {cover.tex\quad \% 封面文件}}
+child { node {figures}
+	child { node {logo.pdf\quad \% 图像}}
+	child { node {...}}}
+child [missing] {} 
+child [missing] {} 
+child { node {format}
+    	child { node {acknowledge.tex\quad \% 致谢}}
+      	child { node {authorization.tex\quad \% 授权书影印件}}
+      	child { node {cabstractpage.tex\quad \% 中文摘要}}
+	child { node {eabstractpage.tex\quad \% 英文摘要}}
+      	child { node {Originality.tex\quad \% 独创性声明}}} 
+child [missing] {} 
+child [missing] {} 
+child [missing] {}
+child [missing] {} 
+child [missing] {} 
+child { node {main.tex\quad \% 主文件}}
+child { node {ref}
+	child { node {ruc.bst\quad \% 参考文献样式}}
+	child { node {yourbib.bib\quad \% 参考文献数据库}}}
+child [missing] {} 
+child [missing] {} 
+child { node {ructhesis.cls\quad \% \RUCThesis\ 文档类}};
+\end{tikzpicture}
+\caption{\RUCThesis\ 文件目录} 
+\end{figure}
+\section{\RUCThesis\ 文档类}
+
+\section{扉页}
+\subsection{宏}
+在{\tt main.tex}文件里面根据
+
