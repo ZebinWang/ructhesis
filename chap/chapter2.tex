@@ -1,5 +1,48 @@
 \chapter{\RUCThesis\ 介绍}
 \RUCThesis\ 是我在学校本科和研究生规定（虽然大部分时间都在迎合这基于word的规定）的基础上写出来的。\par
+\section{必要的宏包}
+本模板中包含的宏包如下表所示：
+\begin{table}[htb]
+  \centering
+  \begin{minipage}[t]{0.8\linewidth} 
+  \caption[必要宏包]{本模板中包含的宏包，当然这些必须安装。其实这些在你的\LaTeX\ 里面已经有了。其实这还是一个简单三线表的例子，其实这还是一个长表格标题的例子，当然还是一个表格中插脚注的例子。}
+  \label{tab:template-files}
+    \begin{tabular*}{\linewidth}{cccccc}
+      \toprule[1.5pt]
+       \multicolumn{6}{c}{\sf 宏包文件}\\ \midrule[1pt] 
+      ctexbook & geometry & hyperref & graphicx\footnote{插图宏包} & titletoc & ifxetex \\ 
+      ifthen  & calc & lscape\footnote{页面横向放置宏包}   & multicol & color   & pstricks\\
+      \bottomrule[1.5pt]
+    \end{tabular*}
+  \end{minipage}
+\end{table}
+
+\section{编译源文件}
+如果已经有ructhesis.cls文件的可以直接使用。
+目前的版本还没有参考文献样式，先借用了一个（可能会报错）。 
+在main.tex文件下使用如下命令：
+
+这里我们使用xelatex作为引擎，第一步为编译main.tex文件，第二步处理参考文献，然后再编译两遍生成pdf文件\\
+{\tt
+\$ xelatex main.tex\\
+\$ bibtex main.tex\\
+\$ xelatex main.tex\\
+\$ xelatex main.tex\\}
+\section{编译模板文件}
+想编译模板文件和生成手册的可以执行下述代码\par
+生成模板文件{\tt ructhesis.cls}\\
+{\tt\$ latex ructhesis.ins}\\
+生成手册{\tt ructhesis.pdf\\
+\$ xelatex ructhesis.dtx\\
+\$ makeindex -s gind.ist -o ructhesis.ind ructhesis.idx\\
+\$ makeindex -s gglo.ist -o ructhesis.gls ructhesis.glo\\
+\$ xelatex ructhesis.dtx\\
+\$ xelatex ructhesis.dtx}
+\section{扉页}
+\subsection{宏}
+
+在{\tt main.tex}文件里面根据
+\begin{landscape}
 \begin{figure}[htbp]
 \centering
 \tikzstyle{every node}=[anchor=west]
@@ -42,6 +85,7 @@ child { node {ructhesis.cls\quad \% \RUCThesis\ 文档类}};
 \end{tikzpicture}
 \caption{\RUCThesis\ 文件目录} 
 \end{figure}
+\end{landscape}
 \section{\RUCThesis\ 文档类}
 
 \section{扉页}
