@@ -1,4 +1,7 @@
-# ructhesis  
+# RUCThesis  
+##中国人民大学LaTeX论文模板
+
+目前支持本科、硕士（学硕+专硕）和博士
 
 **如果已经有ructhesis.cls文件的可以直接使用。**  
 
