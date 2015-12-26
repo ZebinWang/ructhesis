@@ -196,12 +196,12 @@ pdfsubject={中国人民大学学位论文}}
 \vfill\ziju{0.65}
 作者学号：\underline{\makebox[80mm]\@studentid}\hfill\par
 作者姓名：\underline{\makebox[80mm]\@author}\hfill\par
-所在学院：\underline{\makebox[80mm]\@school}\hfill\par
+所在学院：\underline{\makebox[80mm]{\ziju{0.2}\@school}}\hfill\par
 专业名称：\underline{\parbox[b]{80mm}{\centering\ziju{0}\@field}}\hfill\par\ziju{0.65}
 导师姓名：\underline{\makebox[80mm]\@advisor}\hfill\par
 \ziju{0.25}
-论文主题词：\underline{\parbox[b]{80mm}{\vspace*{1pt}\centering\@keywords}}\hfill\par
-\ziju{0}
+论文主题词：\underline{\parbox[b]{80mm}{\vspace*{1pt}\centering\ziju{0}\@keywords}}
+\hfill\par\ziju{0}
 论文提交日期：\underline{\makebox[80mm]\@date}\hfill
 \end{center}
 \rowspace%研究生全文行距
@@ -316,7 +316,7 @@ subsubsection/numberformat = \bf\zihao{5}
 }
 \fi
 \RequirePackage{titletoc}
-\titlecontents{chapter}[0pt]{\sf\zihao{4}\addvspace{1em}\filright}
+\titlecontents{chapter}[0pt]{\sf\zihao{4}\addvspace{2pt}\filright}
               {\contentspush{\thecontentslabel\ }}
               {}{\titlerule*[10pt]{.}\bf\contentspage}
 \titlecontents{section}[2em]{\rm\zihao{-4}\addvspace{2pt}\filright}
@@ -468,6 +468,11 @@ subsubsection/numberformat = \bf\zihao{5}
 \end{landscape}
 \restoregeometry
 }
+\RequirePackage{caption2}
+\captionstyle{normal}
+\renewcommand{\captionfont}{\zihao{5}\rm}
+\renewcommand{\captionlabelfont}{\zihao{5}\bf}
+\renewcommand{\captionlabeldelim}{\,\,}
 \RequirePackage{booktabs}%三线表
 \RequirePackage{colortbl}%表格颜色
 \RequirePackage{diagbox}%表头制作
@@ -477,12 +482,11 @@ subsubsection/numberformat = \bf\zihao{5}
 \setlength{\belowcaptionskip}{6pt}
 \RequirePackage{wrapfig}%图文混排，段落首字下沉
 \RequirePackage{subfigure}%子图
-\RequirePackage{caption2}%标题设置
-\captionstyle{normal}
-\renewcommand{\captionfont}{\zihao{5}\rm}
-\renewcommand{\captionlabelfont}{\zihao{5}\bf}
-\renewcommand{\captionlabeldelim}{\,\,}
 \RequirePackage{tikz}%绘图
+\RequirePackage{amsmath,amsfonts}%
+\RequirePackage{latexsym,bm}%
+\RequirePackage{extarrows}%
+\RequirePackage{pifont}%
  \endinput
 \endinput
 %%

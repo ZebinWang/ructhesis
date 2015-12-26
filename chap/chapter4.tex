@@ -1,0 +1,71 @@
+\chapter{一些例子}
+\section{各种例子}
+\subsection{插图表格}
+\begin{figure}[htbp]
+\centering\includegraphics[width=5cm,height=1.32cm]{figures/logo3.pdf}
+\caption[中英校名]{中英校名}
+\end{figure}
+\begin{table}[htbp]
+\noindent\begin{minipage}{0.5\textwidth}
+\centering
+\caption{并排子表格}
+\label{tab:parallel1}
+\begin{tabular}{p{2cm}p{2cm}}
+\toprule[1.5pt]
+姓名 & 性别 \\\midrule[1pt]
+李狗蛋 & 女 \\\bottomrule[1.5pt]
+\end{tabular}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\centering
+\caption{并排子表格}
+\label{tab:parallel2}
+\begin{tabular}{p{2cm}p{2cm}}
+\toprule[1.5pt]
+姓名 & 性别 \\\midrule[1pt]
+张狗蛋 & 女 \\\bottomrule[1.5pt]
+\end{tabular}
+\end{minipage}
+\end{table}
+\begin{table}[htbp]
+\centering
+\caption{并排子表格}
+\label{tab:subtable}
+\subtable[第一个子表格]
+{
+\begin{tabular}{p{2cm}p{2cm}}
+\toprule[1.5pt]
+姓名 & 性别 \\\midrule[1pt]
+田狗蛋 & 男 \\\bottomrule[1.5pt]
+\end{tabular}
+}
+\hskip2cm
+\subtable[第二个子表格]
+{
+\begin{tabular}{p{2cm}p{2cm}}
+\toprule[1.5pt]
+姓名 & 性别 \\\midrule[1pt]
+李狗蛋 & 女 \\\bottomrule[1.5pt]
+\end{tabular}
+}
+\end{table}
+
+\subsection{数学环境}
+下面是几个数学公式的例子：\par
+\begin{equation}
+\begin{aligned}
+P\{S_n \leq t\} &= \int_{-\infty}^{+\infty}f_{S_n}dt \notag \\
+                       &= \int_0^t\frac{\lambda(\lambda u)^{n-1}}{(n-1)!}e^{-\lambda u}du \\
+                       &\xlongequal{令 \lambda u=x} \frac{1}{(n-1)!}\int_0^{\lambda t}x^{n-1}e^{-x}dx\\
+                       &=\frac{-1}{(n-1)!}(e^{-x}x^{n-1}{\Big|}_0^{\lambda t}-\int_0^{\lambda t}e^{-x}dx^{n-1})\\
+                       &=\frac{-1}{(n-1)!}e^{-x}x^{n-1}{\Big|}_0^{\lambda t}+\frac{1}{(n-2)!}\int_0^{\lambda t}e^{-x}x^{n-2}dx
+\end{aligned}
+\end{equation}\par
+再来几个：
+\begin{equation}
+\begin{aligned}
+\lambda &=\left (1+\frac{\left(\frac{\bar{X}-\bar{Y}}{\sqrt{((\frac{1}{n}+\frac{1}{m})\sigma^2)}}\right)^2}{\left(\sqrt{\frac{\sum\limits_{i=1}^n(X_i-\bar{X})^2+\sum\limits_{i=1}^m(Y_i-\bar{Y})^2}{(m+n)\sigma^2}}\right)^2(m+n-2)}\right)^{\frac{n+m}{2}} \\ \notag
+            &=\left(1+\frac{T^2}{n+m-2}\right)^{\frac{n+m}{2}}\\
+ 其中\quad T^2 &=\left(\frac{\frac{\bar{X}-\bar{Y}}{\sqrt{((\frac{1}{n}+\frac{1}{m})\sigma^2)}}}{{\sqrt{\frac{\sum\limits_{i=1}^n(X_i-\bar{X})^2+\sum\limits_{i=1}^m(Y_i-\bar{Y})^2}{(m+n)\sigma^2}}}}\right)^2
+\end{aligned}
+\end{equation}
