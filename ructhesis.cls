@@ -317,14 +317,20 @@ subsubsection/numberformat = \bf\zihao{5}
 \fi
 \RequirePackage{titletoc}
 \titlecontents{chapter}[0pt]{\sf\zihao{4}\addvspace{2pt}\filright}
-              {\contentspush{\thecontentslabel\ }}
-              {}{\titlerule*[10pt]{.}\bf\contentspage}
+{\contentspush{\thecontentslabel\ }}
+{}{\titlerule*[10pt]{.}{\bf\contentspage}}
 \titlecontents{section}[2em]{\rm\zihao{-4}\addvspace{2pt}\filright}
-              {\contentspush{\thecontentslabel\ }}
-              {}{\titlerule*[10pt]{.}\contentspage}
+{\contentspush{\thecontentslabel\ }}
+{}{\titlerule*[10pt]{.}\contentspage}
 \titlecontents{subsection}[4em]{\rm\zihao{-4}\addvspace{2pt}\filright}
-              {\contentspush{\thecontentslabel\ }}
-              {}{\titlerule*[10pt]{.}\contentspage}
+{\contentspush{\thecontentslabel\ }}
+{}{\titlerule*[10pt]{.}\contentspage}
+\titlecontents{figure}[10pt]{\rm\zihao{-4}\addvspace{2pt}}
+{图~\thecontentslabel\, }
+{}{\titlerule*[10pt]{.}\contentspage}
+\titlecontents{table}[10pt]{ \rm\zihao{-4}\addvspace{2pt}}
+{表~\thecontentslabel\, }
+{}{\titlerule*[10pt]{.}\contentspage}
 \RequirePackage{ifxetex}
 \RequirePackage{ifthen,calc}
 \def\ruc@textcircled#1{%
@@ -371,7 +377,7 @@ subsubsection/numberformat = \bf\zihao{5}
 \setCJKfamilyfont{X}{FZXBSJW--GB1-0}
 \newcommand{\X}{\CJKfamily{X}}
 \newcommand{\cover}{
-\newgeometry{top=0mm,left=20mm,bottom=40mm,right=0mm}
+\newgeometry{top=0mm,left=20mm,bottom=0mm,right=0mm,voffset=10mm,columnsep=5.5cm}
 \ifruc@doctor
 \pagecolor{rucorange}
 \else
@@ -387,7 +393,7 @@ subsubsection/numberformat = \bf\zihao{5}
 \fi
 \begin{landscape}
 \begin{multicols}{2}
-\rule[0mm]{2mm}{0mm}
+\rule[0mm]{22mm}{0mm}
 \ifruc@doctor
 \includegraphics[width=5.7cm,height=1.14cm]{figures/logo.pdf}\\
 \else
@@ -400,21 +406,21 @@ subsubsection/numberformat = \bf\zihao{5}
 \ifruc@doctor
 \color{rucred}
 \else\color{rucwhite}
-\fi\zihao{2}\rule[10mm]{10mm}{0mm}
+\fi\zihao{2}\rule[10mm]{30mm}{0mm}
 \ifruc@doctor
 \makebox[5.7cm][s]{\doctorsign}\\
-\zihao{-4}\rule[6mm]{12mm}{0mm}\makebox[5.7cm][s]{\doctoresign}
+\zihao{-4}\rule[6mm]{32mm}{0mm}\makebox[5.7cm][s]{\doctoresign}
 \else
 \ifruc@master
 \makebox[5.7cm][s]{\mastersign}\\
-\zihao{-4}\rule[6mm]{12mm}{0mm}\makebox[5.7cm][s]{\masteresign}
+\zihao{-4}\rule[6mm]{32mm}{0mm}\makebox[5.7cm][s]{\masteresign}
 \else
 \ifruc@promaster
 \makebox[6.3cm][s]{\promastersign}\\
-\zihao{-5}\rule[6mm]{12mm}{0mm}\makebox[6.3cm][s]{\promasteresign}
+\zihao{-5}\rule[6mm]{32mm}{0mm}\makebox[6.3cm][s]{\promasteresign}
 \else
 \makebox[5.7cm][s]{\bachelorsign}\\
-\zihao{5}\rule[0mm]{12mm}{0mm}\makebox[5.7cm][s]{\bacheloresign}
+\zihao{5}\rule[0mm]{32mm}{0mm}\makebox[5.7cm][s]{\bacheloresign}
 \fi\fi\fi}
 \vfill
 \begin{center}
@@ -460,10 +466,8 @@ subsubsection/numberformat = \bf\zihao{5}
 \thispagestyle{empty}
 \ifruc@shuji
 \ifruc@doctor\color{rucbalck}\else\color{rucwhite}\fi
-\rput[l]{0}(18.3,20){\sf\zihao{3}%
-\shortstack[c]{\@covertitle}}
-\rput[l]{0}(18.3,5){\sf\zihao{3}%
-\shortstack[c]{中\\国\\人\\民\\大\\学}}
+\uput[l]{0}(0.5\paperheight,20){{\sf\zihao{3}\shortstack[c]{\@covertitle}}}
+\uput[l]{0}(0.5\paperheight,5){{\sf\zihao{3}\shortstack[c]{中\\国\\人\\民\\大\\学}}}
 \else\fi
 \end{landscape}
 \restoregeometry
