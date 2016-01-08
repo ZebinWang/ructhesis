@@ -5,7 +5,7 @@
 %% The original source files were:
 %%
 %% ructhesis.dtx  (with options: `cls')
-%%  Copyright (C) 2014--2015 Zebin Wang <me@zebinwang.com>
+%%  Copyright (C) 2014--2016 Zebin Wang <me@zebinwang.com>
 %%  --------------------------------------------------------------------------
 %% 
 %%  This work may be distributed and/or modified under the
@@ -466,8 +466,8 @@ subsubsection/numberformat = \bf\zihao{5}
 \thispagestyle{empty}
 \ifruc@shuji
 \ifruc@doctor\color{rucbalck}\else\color{rucwhite}\fi
-\uput[l]{0}(0.5\paperheight,20){{\sf\zihao{3}\shortstack[c]{\@covertitle}}}
-\uput[l]{0}(0.5\paperheight,5){{\sf\zihao{3}\shortstack[c]{中\\国\\人\\民\\大\\学}}}
+\uput[u]{0}(0.5\paperheight,15){{\sf\zihao{3}\shortstack[c]{\@covertitle}}}
+\uput[u]{0}(0.5\paperheight,3){{\sf\zihao{3}\shortstack[c]{中\\国\\人\\民\\大\\学}}}
 \else\fi
 \end{landscape}
 \restoregeometry
