@@ -160,7 +160,6 @@ pdfsubject={中国人民大学学位论文}}
 \fi
 \fi}
 \RequirePackage{graphicx}
-\newif\if@subtitle
 \ifruc@bachelor
 \renewcommand{\maketitle}{
 \newgeometry{top=25mm,left=25mm,bottom=40mm,right=20mm,footskip=0mm,a4paper}
@@ -170,7 +169,7 @@ pdfsubject={中国人民大学学位论文}}
 {\hfill\zihao{-4}\sf\@thesiscode
 \begin{center}\zihao{1}\rule[0mm]{0mm}{25mm}\@sign\par\vspace{15mm}
 \@title\par
-\zihao{2}\@subtitletrue\par\vskip\stretch{1}\zihao{3}
+\zihao{2}\@subtitle\par\vskip\stretch{1}\zihao{3}
 作\qquad 者：\underline{\makebox[90mm]\@author}\hfill\par
 学\qquad 院：\underline{\makebox[90mm]\@school}\hfill\par
 专\qquad 业：\underline{\makebox[90mm]\@field}\hfill\par

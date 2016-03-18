@@ -6,7 +6,7 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[a4paper,doctor]{ructhesis}
+\documentclass[a4paper,bachelor]{ructhesis}
 
 %自添宏包
 \usepackage{skak}%国际象棋
@@ -18,9 +18,11 @@
 
 %将封面信息补全，相关专业名称过长的请在文字前添加命令\ziju{-0.15}
 %文头
-%\sign{中国人民大学本科毕业论文}
+\sign{中国人民大学本科毕业论文}
 %\sign{硕士学位论文}
-\sign{博士学位论文}
+%\sign{博士学位论文}
+
+
 
 %以下信息本科研究生都需要补全
 \title{中国人民大学LaTeX模板}%论文题名
@@ -30,17 +32,22 @@
 \studentid{2012202000}%学号
 \advisor{}%指导老师
 \date{2015年12月11日}
+
+
 %以下本科填写
 \grade{}%年级
 \score{4.0}%成绩
 \thesiscode{论文编码：RUC-BK-专业代码}%论文编码
-%\subtitle{------20天打虎从入门到精通}%论文副题名
+\subtitle{}%论文副题名，没有不填写
+
+
 %以下研究生填写
 \etitle{LaTeX template of Renmin university of China}%英文题目
 \keywords{\TeX{}}%论文主题词
 %摘要关键词
 \keywordzh{中文摘要关键词}%中文摘要关键词
 \keyworden{English\qquad template}%英文摘要关键词
+
 
 %
 \begin{document}
