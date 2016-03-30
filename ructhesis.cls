@@ -360,7 +360,8 @@ subsubsection/numberformat = \bf\zihao{5}
 #1
 \par\egroup}\else\fi
 \ifruc@bachelor
-\newcommand{\autograph}{\\{\noindent\zihao{4}\sf\rule[0mm]{0mm}{15mm}作者签名：
+\newcommand{\autograph}{  %
+{\noindent\zihao{4}\sf\rule[0mm]{0mm}{15mm}作者签名：
 \rule[-1ex]{30mm}{0.25pt}}}
 \else\fi
 \RequirePackage{lscape}

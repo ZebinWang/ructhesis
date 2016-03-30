@@ -568,7 +568,8 @@ text={\paperwidth,\paperheight},marginparwidth=0mm}\hspace{-9mm}
 % \begin{macro}{\autograph} 插入签名，在普通章节文件中插入无限制，但在\tt main.tex\rm 文件插入时被插入的章节不能使用\tt\textbackslash include\rm 命令，需使用\tt\textbackslash input\rm 命令。
 %    \begin{macrocode}
 \ifruc@bachelor
-\newcommand{\autograph}{\\{\noindent\zihao{4}\sf\rule[0mm]{0mm}{15mm}作者签名：
+\newcommand{\autograph}{  %
+{\noindent\zihao{4}\sf\rule[0mm]{0mm}{15mm}作者签名：
 \rule[-1ex]{30mm}{0.25pt}}}
 \else\fi
 %    \end{macrocode}
