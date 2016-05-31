@@ -327,6 +327,7 @@
 % \begin{macro}{\maketitle} 插入扉页
 %    \begin{macrocode}
 \RequirePackage{graphicx}
+\newif\if@subtitle
 \ifruc@bachelor
 \renewcommand{\maketitle}{ 
 	\newgeometry{top=25mm,left=25mm,bottom=40mm,right=20mm,footskip=0mm,a4paper}
@@ -336,7 +337,7 @@
 	{\hfill\zihao{-4}\sf\@thesiscode
 	\begin{center}\zihao{1}\rule[0mm]{0mm}{25mm}\@sign\par\vspace{15mm}
 	\@title\par
-	\zihao{2}\@subtitle\par\vskip\stretch{1}\zihao{3}
+	\zihao{2}\@subtitletrue\par\vskip\stretch{1}\zihao{3}
 	作\qquad 者：\underline{\makebox[90mm]\@author}\hfill\par 
 	学\qquad 院：\underline{\makebox[90mm]\@school}\hfill\par
 	专\qquad 业：\underline{\makebox[90mm]\@field}\hfill\par
@@ -711,6 +712,10 @@ text={\paperwidth,\paperheight},marginparwidth=0mm}\hspace{-9mm}
 \RequirePackage{colortbl}%表格颜色
 \RequirePackage{diagbox}%表头制作
 \RequirePackage{longtable}%长表格
+\let\ruc@LT@array\LT@array
+\def\LT@array{\zihao{5}\rm\ruc@LT@array}
+\let\old@tabular\@tabular
+\def\ruc@tabular{\old@tabular\zihao{5}}
 \RequirePackage{multirow}%跨行宏包
 %    \end{macrocode}
 % \subsection{表格caption上下间距}
