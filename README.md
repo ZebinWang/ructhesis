@@ -57,7 +57,7 @@ Courier New | CourierNewPSMT
 `$ xelatex ructhesis.dtx`  
 
 ###联系  
-如果模板本身的问题可以上[GitHub](https://github.com/ZebinWang/ructhesis)上发一篇issue。   
+如果模板本身的问题可以上[GitHub](https://github.com/ZebinWang/ructhesis)上发篇issue。   
 
 如果想贡献代码的请email我: <me@zebinwang.com> 
 
