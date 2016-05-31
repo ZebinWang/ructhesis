@@ -7,7 +7,7 @@
 **目前的版本使用了[GitHub](https://github.com/ustctug/gbt-7714-2015)的2015国标参考文献样式。**   
 在main.tex文件下使用如下命令：  
 
-这里我们使用xelatex作为引擎，第一步为编译main.tex文件，第二步处理参考文献，然后再编译两遍生成pdf文件  
+这里我们使用xelatex作为排版引擎，第一步为编译main.tex文件，第二步处理参考文献，然后再编译两遍生成pdf文件。
 
 `$ xelatex main.tex`  
 `$ bibtex main.tex`  
