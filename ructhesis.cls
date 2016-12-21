@@ -473,6 +473,7 @@ subsubsection/numberformat = \bf\zihao{5}
 \end{landscape}
 \restoregeometry
 }
+\RequirePackage{natbib}%参考文献
 \RequirePackage{caption2}
 \captionstyle{normal}
 \renewcommand{\captionfont}{\zihao{5}\rm}

@@ -4,7 +4,7 @@
 目前支持本科、硕士（学硕+专硕）和博士
 
 **如果已经有ructhesis.cls文件的可以直接使用。**  
-**目前的版本使用了[GitHub](https://github.com/ustctug/gbt-7714-2015)的2015国标参考文献样式。**   
+**目前的版本使用了[2015国标](https://github.com/ustctug/gbt-7714-2015)的参考文献样式。**   
 在main.tex文件下使用如下命令：  
 
 这里我们使用xelatex作为排版引擎，第一步编译main.tex文件，第二步处理参考文献，然后再编译两遍生成pdf文件。
@@ -13,6 +13,11 @@
 `$ bibtex main.tex`  
 `$ xelatex main.tex`  
 `$ xelatex main.tex` 
+
+##重要信息  
+**1、编辑器要用UTF-8的编码要不然你打开是乱码。**  
+**2、排版引擎使用XeLaTeX，要不然会报错。**  
+
 
 ###必要的字体文件
 
