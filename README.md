@@ -7,10 +7,12 @@
 
 这里我们使用`xelatex`作为排版引擎，第一步编译`main.tex`文件，第二步处理参考文献，然后再编译两遍生成`pdf`文件.
 
-- `$ xelatex main.tex`
-- `$ bibtex main.tex`
-- `$ xelatex main.tex`
-- `$ xelatex main.tex`
+```shell
+$ xelatex main.tex
+$ bibtex main.tex
+$ xelatex main.tex
+$ xelatex main.tex
+```
 
 **重要信息**
 
