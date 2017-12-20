@@ -1,21 +1,16 @@
-# 中国人民大学LaTeX论文模板
-
-**DON'T PANIC**
-**不要担心，这个项目保证可以运行**
+# 中国人民大学LaTeX论文模板——不要担心，这个项目可以运行
 
 
 目前支持本科、硕士（学硕+专硕）和博士
 
-**如果已经有ructhesis.cls文件的可以直接使用. **
-**目前的版本使用了[2015国标](https://github.com/ustctug/gbt-7714-2015)的参考文献样式. **
-在`main.tex`文件下使用如下命令：
+**如果已经有ructhesis.cls文件的可以直接使用. 目前的版本使用了[2015国标](https://github.com/ustctug/gbt-7714-2015)的参考文献样式. **
 
 这里我们使用`xelatex`作为排版引擎，第一步编译`main.tex`文件，第二步处理参考文献，然后再编译两遍生成`pdf`文件.
 
-`$ xelatex main.tex`
-`$ bibtex main.tex`
-`$ xelatex main.tex`
-`$ xelatex main.tex`
+- `$ xelatex main.tex`
+- `$ bibtex main.tex`
+- `$ xelatex main.tex`
+- `$ xelatex main.tex`
 
 **重要信息**
 
