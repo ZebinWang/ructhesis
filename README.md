@@ -3,7 +3,7 @@
 
 目前支持本科、硕士（学硕+专硕）和博士
 
-**如果已经有ructhesis.cls文件的可以直接使用. 目前的版本使用了[2015国标](https://github.com/ustctug/gbt-7714-2015)的参考文献样式. **
+如果已经有`ructhesis.cls`文件的可以直接使用. 目前的版本使用了[2015国标](https://github.com/ustctug/gbt-7714-2015)的参考文献样式.
 
 这里我们使用`xelatex`作为排版引擎，第一步编译`main.tex`文件，第二步处理参考文献，然后再编译两遍生成`pdf`文件.
 
