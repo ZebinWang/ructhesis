@@ -9,35 +9,35 @@
 
 \LaTeX\ 使用\TeX\ 作为它的格式化引擎，当前的版本是\LaTeX 2ε。
 \begin{figure}[htbp]
-\centering
-\subfigure[国际象棋]{ 
-	\label{fig:mini:subfig:a} %% label for first subfigure 
-	\begin{minipage}[b]{0.5\textwidth} 
-	\centering 
-	\fenboard{%
-	r5k1/%
-	1b1p1ppp/%
-	p7/%
-	1p1Q4/%
-	2p1r3/%
-	PP4Pq/%
-	BBP2b1P/%
-	R4R1K w - - 0 20}
-	\mbox{}\showboard
-	\end{minipage}}% 
+    \centering
+    \subfigure[国际象棋]{
+        \label{fig:mini:subfig:a} %% label for first subfigure
+    \begin{minipage}[b]{0.5\textwidth}
+        \centering
+        \fenboard{%
+            r5k1/%
+        1b1p1ppp/%
+        p7/%
+        1p1Q4/%
+        2p1r3/%
+        PP4Pq/%
+        BBP2b1P/%
+        R4R1K w - - 0 20}
+        \mbox{}\showboard
+    \end{minipage}}%
 \subfigure[化学式]{
-	\label{fig:mini:subfig:b} %% label for second subfigure 
-	\begin{minipage}[b]{0.5\textwidth} 
-	\centering 
-      	\chemfig{
- 	H_3C-[:72]{\color{blue}N}*5(- 
-	*6(-(={\color{red}O})-
-	{\color{blue}N}(-CH_3)-
-	(={\color{red}O})-
-	{\color{blue}N}(-CH_3)-=)--
-	{\color{blue}N}=-)}
-   	 \end{minipage}} 
-\caption{\LaTeX\ 绘图示例} 
-\label{fig:mini:subfig} %% label for entire figure 
+    \label{fig:mini:subfig:b} %% label for second subfigure
+    \begin{minipage}[b]{0.5\textwidth}
+        \centering
+        \chemfig{
+            H_3C-[:72]{\color{blue}N}*5(-
+        *6(-(={\color{red}O})-
+        {\color{blue}N}(-CH_3)-
+        (={\color{red}O})-
+        {\color{blue}N}(-CH_3)-=)--
+        {\color{blue}N}=-)}
+    \end{minipage}}
+\caption{\LaTeX\ 绘图示例}
+    \label{fig:mini:subfig} %% label for entire figure
 \end{figure}
 
