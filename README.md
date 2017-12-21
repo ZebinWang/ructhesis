@@ -3,6 +3,8 @@
 
 目前支持本科、硕士（学硕+专硕）和博士
 
+![example](https://gh1995.github.io/2017/12/20/RUC-thesis-template/ruc.png)
+
 如果已经有`ructhesis.cls`文件的可以直接使用. 目前的版本使用了[2015国标](https://github.com/ustctug/gbt-7714-2015)的参考文献样式.
 
 这里我们使用`xelatex`作为排版引擎，第一步编译`main.tex`文件，第二步处理参考文献，然后再编译两遍生成`pdf`文件.
@@ -33,11 +35,12 @@ $ xelatex main.tex
 | `仿宋`            | `FangSong`          |
 | `方正小标宋`      | `FZXBSJW–GB1-0`     |
 
-你要是没有就从[这里]()下载
+可以从[这里]()下载
 
 ## 使用的宏包（没问题就忽略）
 
 全部都是TeX Live自带的
+
 - `ctexbook`
 - `geometry`
 - `hyperref`
@@ -106,4 +109,4 @@ $ xelatex main.tex
 
 ## 结束
 
-如果你厌恶了error，发邮件给我吧。 tulingjiaoyu#126.com
+如果你厌恶了**error**，发邮件给我吧。 tulingjiaoyu#126.com
