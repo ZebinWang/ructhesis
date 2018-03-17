@@ -35,7 +35,7 @@ $ xelatex main.tex
 | `仿宋`            | `FangSong`          |
 | `方正小标宋`      | `FZXBSJW–GB1-0`     |
 
-可以从[这里]()下载
+可以从[这里](http://pan.baidu.com/s/1eRFJXnW)下载
 
 ## 使用的宏包（没问题就忽略）
 
@@ -110,3 +110,5 @@ $ xelatex main.tex
 ## 结束
 
 如果你厌恶了**error**，发邮件给我吧。 tulingjiaoyu#126.com
+
+**Tips: **临近毕业，发邮件提问的学弟学妹越来越多了，但一个人的精力有限，有些问题是重复的，有的问题涉及的细节很多。更希望大家开issue讨论，或者直接发PR给我，这样可以帮助更多的人。
