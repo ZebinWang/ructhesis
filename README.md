@@ -38,6 +38,11 @@ $ xelatex main.tex
 
 可以从[这里](http://pan.baidu.com/s/1eRFJXnW)下载
 
+## Ubuntu安装LaTeX
+```shell
+sudo apt install texlive-full
+```
+
 ## 使用的宏包（没问题就忽略）
 
 全部都是TeX Live自带的
@@ -95,7 +100,7 @@ $ xelatex main.tex
     - `PDF Viewer` 改为 `Internal PDF Viewer(windowed)`，这样预览时会弹出一个独立的窗口，这样比较方便.
 5. 编译. 用`TeX Studio`打开`main.tex`，点击界面上的绿色箭头就可以开始编译了. 在下方的窗口可以看到`TeX Studio`正在使用的编译命令是`xelatex -synctex=1 -interaction=nonstopmode "main".tex`
 
-## 如果你也和我一样使用vim，这里给你准备了点心
+## 如果你也和我一样使用vim，这里给你准备了插件和推荐配置
 
 安装`lervag/vimtex`，配置参考[这里](https://github.com/GH1995). `cp dotfile/latexmkrc ~/.latexmkrc`，`vimtex`的配置可以直接使用[这个](https://github.com/GH1995/vimrc/blob/master/config/vimtex.vim).
 
