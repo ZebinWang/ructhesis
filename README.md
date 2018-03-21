@@ -1,5 +1,20 @@
 # 中国人民大学LaTeX论文模板——不要担心，这个项目可以运行
 
+Table of Contents
+=================
+
+   * [中国人民大学LaTeX论文模板——不要担心，这个项目可以运行](#中国人民大学latex论文模板不要担心这个项目可以运行)
+      * [字体文件](#字体文件)
+      * [Ubuntu安装LaTeX](#ubuntu安装latex)
+      * [使用的宏包（没问题就忽略）](#使用的宏包没问题就忽略)
+      * [想编译模板文件和生成手册的可以执行下述代码](#想编译模板文件和生成手册的可以执行下述代码)
+         * [生成模板文件ructhesis.cls](#生成模板文件ructhesiscls)
+         * [生成手册ructhesis.pdf](#生成手册ructhesispdf)
+      * [在Windows下编译](#在windows下编译)
+      * [在Ubuntu下用Tex Studio编译](#在ubuntu下用tex-studio编译)
+      * [如果你也和我一样使用vim，这里给你准备了插件和推荐配置](#如果你也和我一样使用vim这里给你准备了插件和推荐配置)
+      * [结束](#结束)
+
 **Tips:** 临近毕业，发邮件提问的学弟学妹越来越多了，但一个人的精力有限，有些问题是重复的，有的问题涉及的细节很多。更希望大家开[issue](https://github.com/GH1995/RUC-thesis-template-for-LaTeX/issues)讨论，或者直接发PR给我，这样可以帮助更多的人。
 
 目前支持本科、硕士（学硕+专硕）和博士
@@ -116,3 +131,4 @@ sudo apt install texlive-full
 ## 结束
 
 如果你厌恶了**error**，发邮件给我吧。 tulingjiaoyu#126.com
+
