@@ -1,8 +1,5 @@
 # 中国人民大学LaTeX论文模板——不要担心，这个项目可以运行
 
-Table of Contents
-=================
-
    * [中国人民大学LaTeX论文模板——不要担心，这个项目可以运行](#中国人民大学latex论文模板不要担心这个项目可以运行)
       * [字体文件](#字体文件)
       * [Ubuntu安装LaTeX](#ubuntu安装latex)
@@ -14,6 +11,8 @@ Table of Contents
       * [在Ubuntu下用Tex Studio编译](#在ubuntu下用tex-studio编译)
       * [如果你也和我一样使用vim，这里给你准备了插件和推荐配置](#如果你也和我一样使用vim这里给你准备了插件和推荐配置)
       * [结束](#结束)
+
+---
 
 **Tips:** 临近毕业，发邮件提问的学弟学妹越来越多了，但一个人的精力有限，有些问题是重复的，有的问题涉及的细节很多。更希望大家开[issue](https://github.com/GH1995/RUC-thesis-template-for-LaTeX/issues)讨论，或者直接发PR给我，这样可以帮助更多的人。
 
