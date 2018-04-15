@@ -30,8 +30,8 @@
 \school{}%学院
 \field{\ }%专业
 \studentid{2012202000}%学号
-\advisor{}%指导老师
-\date{2015年12月11日}
+\advisor{}%指导老师不需要填写，似乎是需要老师亲笔签名，详细情况见本科生毕业论文指导手册（2017年修订）
+\date{}
 
 
 %以下本科填写
@@ -44,7 +44,8 @@
 %以下研究生填写
 \etitle{LaTeX template of Renmin university of China}%英文题目
 \keywords{\TeX{}}%论文主题词
-%摘要关键词
+
+%摘要关键词：本科研究生都需要填写
 \keywordzh{中文摘要关键词}%中文摘要关键词
 \keyworden{English\qquad template}%英文摘要关键词
 
@@ -56,9 +57,9 @@
 \maketitle
 
 %独创性声明
-\originality
+%\originality %本科不需要
 %授权书在这插入
-\authorization{figures/shouquan.png}
+%\authorization{figures/shouquan.png} %本科不需要
 %中文摘要
 \include{format/cabstractpage}
 %英文摘要
@@ -85,7 +86,7 @@
 \input{chap/chapter4}%要插入本科签名的最后一个章节,插入命令使用\input{}
 
 %本科签名
-%\autograph
+\autograph
 
 
 %参考文献
