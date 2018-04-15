@@ -26,6 +26,9 @@
 %%  and the derived file RUCThesis.cls.
 %%
 %%  --------------------------------------------------------------------------
+
+%% 根据本科毕业论文指导手册（2017年修订）仅对本科选项进行修改
+%% 文档类及选项定义
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{ructhesis}[2015/12/01 v1.0.0]
 \newif\ifruc@bachelor
@@ -42,6 +45,8 @@
 \ProcessOptions\relax
 \ifruc@doctor\LoadClass[UTF8,zihao=-4,twoside,openright,fancyhdr]{ctexbook}
 \else\LoadClass[UTF8,zihao=-4,oneside,openany,fancyhdr]{ctexbook}\fi
+
+%% 宏
 \def\thesiscode#1{\gdef\@thesiscode{#1}}
 \def\sign#1{\gdef\@sign{#1}}
 \def\esign#1{\gdef\@esign{#1}}
@@ -72,12 +77,16 @@
 \def\eabstractpagesign{Abstract}
 \def\acknowledgesign{致谢}
 \newcommand{\RUCThesis}{{\tt R\kern-.107em\lower.5ex\hbox{U}\kern-.1em CThesis}}
+
+%% 页面布局
 \ifruc@bachelor
-\RequirePackage[top=25mm,left=25mm,bottom=25mm,right=20mm,footskip=10mm]{geometry}
-\setlength{\topskip}{10mm}
+\RequirePackage[top=20mm,left=20mm,bottom=20mm,right=15mm,footskip=10mm]{geometry} %页边距调整；footskip没有变动
+\setlength{\topskip}{5mm} %由10mm改成5mm
 \else
 \RequirePackage[top=45mm,left=35mm,bottom=40mm,right=30mm,headsep=20mm]{geometry}
 \fi
+
+%% PDF
 \RequirePackage{hyperref}
 \AtBeginDocument{
 \hypersetup{
@@ -85,6 +94,8 @@ pdftitle={\@title},
 pdfauthor={\@author},
 pdfsubject={中国人民大学学位论文}}
 }
+
+%% 字体
 \setmainfont{TimesNewRomanPSMT}
 \setsansfont{ArialMT}
 \setmonofont{CourierNewPSMT}
@@ -92,6 +103,8 @@ pdfsubject={中国人民大学学位论文}}
 \setCJKmainfont{SimSun}
 \setCJKsansfont{SimHei}
 \setCJKmonofont{FangSong}
+
+%% 行距
 \newcommand{\rowspace}{%
 \setlength{\lineskiplimit}{2.625bp}
 \setlength{\lineskip}{2.625bp}
@@ -101,32 +114,39 @@ pdfsubject={中国人民大学学位论文}}
 \linespread{1.35}\selectfont
 \fi
 }
+
+%% 空白页码设计
 \let\ruc@cleardoublepage\cleardoublepage
 \newcommand{\ruc@clearemptydoublepage}{%
 \clearpage{\pagestyle{empty}\ruc@cleardoublepage}}
 \let\cleardoublepage\ruc@clearemptydoublepage
+
+%% 页眉页脚
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{}
 \rhead{}
+
 \ifruc@bachelor
-\chead{\includegraphics[width=4.13cm,height=0.8452cm]{figures/logo.pdf}}
+\chead{\includegraphics[width=4.13cm,height=0.98cm]{figures/logo.pdf}} %页眉人大logo高度调整为0.98cm
 \fancyfoot[CO,CE]{ 第 \thepage 页}
 \else
 \chead{\zihao{5}\@title}
+
 \if@twoside
 \fancyfoot[RO,LE]{\thepage}
 \else
 \fancyfoot[RO,RE]{\thepage}
 \fi
 \fi
+
 \fancypagestyle{headings}{
 \fancyhf{}
 \lhead{}
 \rhead{}
 \ifruc@bachelor
-\chead{\includegraphics[width=4.13cm,height=0.8452cm]{figures/logo.pdf}}
-\fancyfoot[CO,CE]{\thepage}
+\chead{\includegraphics[width=4.13cm,height=0.98cm]{figures/logo.pdf}} %页眉人大logo高度调整为0.98cm
+%\fancyfoot[CO,CE]{\thepage} % 注释掉这一行
 \else
 \chead{}\renewcommand*{\headrulewidth}{0bp}
 \if@twoside
@@ -135,42 +155,47 @@ pdfsubject={中国人民大学学位论文}}
 \fancyfoot[RO,RE]{\thepage}
 \fi
 \fi}
+
 \fancypagestyle{myheadings}{
 \fancyhf{}
 \lhead{}
 \rhead{}
-\chead{\includegraphics[width=4.13cm,height=0.8452cm]{figures/logo.pdf}}
+\chead{\includegraphics[width=4.13cm,height=0.98cm]{figures/logo.pdf}} %页眉人大logo高度调整为0.98cm
 \fancyfoot[LO,LE]{}
 \fancyfoot[RO,RE]{}
 \fancyfoot[CO,CE]{}}
+
 \fancypagestyle{plain}{
 \fancyhf{}
 \lhead{}
 \rhead{}
 \ifruc@bachelor
-\chead{}\renewcommand*{\headrulewidth}{0pt}
+\chead{\includegraphics[width=4.13cm,height=0.98cm]{figures/logo.pdf}} %\renewcommand*{\headrulewidth}{0pt} %章节首页添加页眉
 \fancyfoot[CO,CE]{ 第 \thepage 页}
 \else
 \chead{}
 \renewcommand*{\headrulewidth}{0pt}
+
 \if@twoside
 \fancyfoot[RO,LE]{\thepage}
 \else
 \fancyfoot[RO,RE]{\thepage}
 \fi
 \fi}
+
+%% 扉页
 \RequirePackage{graphicx}
 \newif\if@subtitle
 \ifruc@bachelor
 \renewcommand{\maketitle}{
-\newgeometry{top=25mm,left=25mm,bottom=40mm,right=20mm,footskip=0mm,a4paper}
+\newgeometry{top=20mm,left=20mm,bottom=40mm,right=15mm,footskip=0mm,a4paper}  %首页按照页边距要求调整
 \setlength{\topskip}{5mm}
 \thispagestyle{myheadings}
 \linespread{1.5}\selectfont
 {\hfill\zihao{-4}\sf\@thesiscode
 \begin{center}\zihao{1}\rule[0mm]{0mm}{25mm}\@sign\par\vspace{15mm}
 \@title\par
-\zihao{2}\@subtitletrue\par\vskip\stretch{1}\zihao{3}
+\zihao{2}\@subtitle\par\vskip\stretch{1}\zihao{3}  %删除了@subtitle之后跟着的true，修改后可以正常显示副标题
 作\qquad 者：\underline{\makebox[90mm]\@author}\hfill\par
 学\qquad 院：\underline{\makebox[90mm]\@school}\hfill\par
 专\qquad 业：\underline{\makebox[90mm]\@field}\hfill\par
@@ -181,7 +206,7 @@ pdfsubject={中国人民大学学位论文}}
 日\qquad 期：\underline{\makebox[90mm]\@date}\hfill
 \end{center}}
 \restoregeometry
-\rowspace%本科全文行距
+\rowspace %本科全文行距
 }
 \else
 \renewcommand{\maketitle}{
@@ -220,12 +245,16 @@ With package \tt{\RUCThesis}\\
 \fi
 }
 \fi
+
+%% 中文摘要环境
 \newenvironment{abstractzh}
 {\clearpage\chapter*{\cabstractpagesign}\vspace*{-5mm}
 \pagenumbering{Roman}\zihao{-4}\rm}
 {\par\vspace*{7mm}\noindent\sf\zihao{-4}关键词：
 \rm\zihao{-4}\@keywordzh
 \thispagestyle{headings}}
+
+%% 英文摘要环境
 \newenvironment{abstracten}
 {\clearpage
 \ifruc@bachelor\linespread{2}\selectfont
@@ -236,10 +265,14 @@ With package \tt{\RUCThesis}\\
 \zihao{-4}\textbf{Key Words : }
 \rm\zihao{-4}\@keyworden
 \thispagestyle{headings}\rowspace}
+
+%% 致谢
 \newenvironment{acknowledge}
 {\chapter*{\acknowledgesign}\vspace*{-5mm}
 \addcontentsline{toc}{chapter}{\acknowledgesign}\zihao{-4}\rm}
 {\thispagestyle{plain}}
+
+%% 授权
 \newcommand{\authorization}[1]
 {\ifruc@doctor\cleardoublepage\else\clearpage\fi
 \newgeometry{top=0mm,left=0mm,bottom=0mm,right=0mm,
@@ -247,23 +280,33 @@ text={\paperwidth,\paperheight},marginparwidth=0mm}\hspace{-9mm}
 \thispagestyle{empty}
 \includegraphics[width=\paperwidth-1mm ,totalheight=\paperheight-1mm]{#1}
 \restoregeometry}
+
+%% 独创性声明
 \newcommand{\originality}{
 \chapter*{\zihao{-2}\heiti 独创性声明}
-{\tt\zihao{-4}本人郑重声明：所呈交的论文是我个人在导师的指导下进行的研究工作及取得的研究成果。尽我所知，除了文中特别加以标注和致谢的地方外，论文中不包含其他人已经发表或撰写的研究成果，也不包含为获得中国人民大学或其他教育机构的学位或证书所使用过的材料。与我一同工作的同志对本研究所做的任何贡献均已在论文中作了明确的说明并表示了谢意。\par}
+{\tt\zihao{-4}本人郑重声明：所呈交的论文是我个人在导师的指导下进行的研究工作及取得的研究成果。尽我所知，除了文中特别加以标注和致谢的地方外，论文中不包含其他人已经发表或撰写的研究成果，也不包含为获得中国人民大学或其他教育机构的学位或证书所使用过的材料。与我一同工作的同志对本研究所做的任何贡献均已在论文中作了明确的说明并表示了谢意。\par
 \vskip 10mm\hfill
-论文作者：\rule[-1ex]{30mm}{0.25pt}\qquad
-日\qquad 期：\rule[-1ex]{30mm}{0.25pt}\par
+论文作者：\underline{\makebox[30mm]\@author}\qquad
+%\rule[-1ex]{30mm}{0.25pt}\qquad
+日\qquad 期：\underline{\makebox[30mm]\@date}\par
+}
+%\rule[-1ex]{30mm}{0.25pt}\par
 \vfil\centerline{\heiti\zihao{-2}关于论文使用授权的说明}
 \vskip 13mm
 {\tt 本人完全了解中国人民大学有关保留、使用学位论文的规定，即：学校有保留送交论文的复印件，允许论文被查阅和借阅；学校可以公布论文的全部或部分内容，可以采用影印、缩印或其他复制手段保存论文。\par
 \vskip 10mm\hfill
-论文作者：\rule[-1ex]{30mm}{0.25pt}\qquad
-日\qquad 期：\rule[-1ex]{30mm}{0.25pt}\par
+论文作者：\underline{\makebox[30mm]\@author}\qquad
+%\rule[-1ex]{30mm}{0.25pt}\qquad
+日\qquad 期：\underline{\makebox[30mm]\@date}\par
+%\rule[-1ex]{30mm}{0.25pt}\par
 \hfill \rule[0mm]{0mm}{8mm}
-指导老师：\rule[-1ex]{30mm}{0.25pt}\qquad
-日\qquad 期：\rule[-1ex]{30mm}{0.25pt}\par}
+指导老师：\underline{\makebox[30mm]\@advisor}\qquad
+%\rule[-1ex]{30mm}{0.25pt}\qquad
+日\qquad 期：\underline{\makebox[30mm]\@date}\par}
 \thispagestyle{empty}
 }
+
+%% 章节标题
 \setcounter{secnumdepth}{4}
 \ifruc@bachelor
 \ctexset{
@@ -315,6 +358,8 @@ subsubsection/titleformat = \sf\zihao{5},
 subsubsection/numberformat = \bf\zihao{5}
 }
 \fi
+
+%% 目录样式
 \RequirePackage{titletoc}
 \titlecontents{chapter}[0pt]{\sf\zihao{4}\addvspace{2pt}\filright}
 {\contentspush{\thecontentslabel\ }}
@@ -331,6 +376,8 @@ subsubsection/numberformat = \bf\zihao{5}
 \titlecontents{table}[10pt]{ \rm\zihao{-4}\addvspace{2pt}}
 {表~\thecontentslabel\, }
 {}{\titlerule*[10pt]{.}\contentspage}
+
+%% 本科圆形脚注
 \RequirePackage{ifxetex}
 \RequirePackage{ifthen,calc}
 \def\ruc@textcircled#1{%
@@ -360,11 +407,15 @@ subsubsection/numberformat = \bf\zihao{5}
 \llap{\box\ruc@tempboxa}%
 #1
 \par\egroup}\else\fi
+
+%% 本科签名
 \ifruc@bachelor
 \newcommand{\autograph}{  %
 {\noindent\zihao{4}\sf\rule[0mm]{0mm}{15mm}作者签名：
 \rule[-1ex]{30mm}{0.25pt}}}
 \else\fi
+
+%% 封面
 \RequirePackage{lscape}
 \RequirePackage{multicol}
 \RequirePackage{color}
@@ -473,12 +524,18 @@ subsubsection/numberformat = \bf\zihao{5}
 \end{landscape}
 \restoregeometry
 }
+
+%% 参考文献
 \RequirePackage{natbib}%参考文献
+
+%% 图表caption设定
 \RequirePackage{caption2}
 \captionstyle{normal}
 \renewcommand{\captionfont}{\zihao{5}\rm}
 \renewcommand{\captionlabelfont}{\zihao{5}\bf}
 \renewcommand{\captionlabeldelim}{\,\,}
+
+%% 表格宏包
 \RequirePackage{booktabs}%三线表
 \RequirePackage{colortbl}%表格颜色
 \RequirePackage{diagbox}%表头制作
@@ -488,16 +545,22 @@ subsubsection/numberformat = \bf\zihao{5}
 \let\old@tabular\@tabular
 \def\ruc@tabular{\old@tabular\zihao{5}}
 \RequirePackage{multirow}%跨行宏包
+
+%% 表格Caption上下间距
 \setlength{\abovecaptionskip}{6pt}
 \setlength{\belowcaptionskip}{6pt}
+
+%% 插图宏包
 \RequirePackage{wrapfig}%图文混排，段落首字下沉
 \RequirePackage{subfigure}%子图
 \RequirePackage{tikz}%绘图
+
+%% 数学宏包
 \RequirePackage{amsmath,amsfonts}%
 \RequirePackage{latexsym,bm}%
 \RequirePackage{extarrows}%
 \RequirePackage{pifont}%
  \endinput
 \endinput
-%%
+
 %% End of file `ructhesis.cls'.

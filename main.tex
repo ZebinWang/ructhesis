@@ -16,38 +16,37 @@
 
 
 
-%将封面信息补全，相关专业名称过长的请在文字前添加命令\ziju{-0.15}
+%将封面信息补全
+
 %文头
 \sign{中国人民大学本科毕业论文}
 %\sign{硕士学位论文}
 %\sign{博士学位论文}
 
+% 以下信息本科研究生都需要补全
+\title{中国人民大学LaTeX模板} %论文题名，论文的正标题
+\author{许白黑} %论文作者姓名
+\school{} %论文作者所在学院的全称
+\field{\ } %论文作者所学专业的全称；相关专业名称过长的请在文字前添加命令\ziju{-0.15}
+\studentid{2012202000} %论文作者的学号
+\advisor{} %指导老师的亲笔签名
+\date{} %论文小组评阅或答辩日期
 
 
-%以下信息本科研究生都需要补全
-\title{中国人民大学LaTeX模板}%论文题名
-\author{许白黑}%作者
-\school{}%学院
-\field{\ }%专业
-\studentid{2012202000}%学号
-\advisor{}%指导老师不需要填写，似乎是需要老师亲笔签名，详细情况见本科生毕业论文指导手册（2017年修订）
-\date{}
-
-
-%以下本科填写
-\grade{}%年级
-\score{4.0}%成绩
-\thesiscode{论文编码：RUC-BK-专业代码}%论文编码
-\subtitle{}%论文副题名，没有不填写
+% 以下本科填写
+\grade{} %论文作者所在年级，如：2014级。
+\score{4.0} %由学院毕业论文评审小组或学院毕业论文答辩委员会最终确认的毕业论文成绩
+\thesiscode{论文编码：RUC-BK-专业代码-学号} %论文编码由学校代码、类别代码、专业代码、学号组成，专业代码详见教务处网站文件下载区。例如：RUC-BK-050101-2014201237。
+\subtitle{} %本项目为任选项目，指论文的副标题，即对论文题名的解释或补充说明
 
 
 %以下研究生填写
 \etitle{LaTeX template of Renmin university of China}%英文题目
 \keywords{\TeX{}}%论文主题词
 
-%摘要关键词：本科研究生都需要填写
-\keywordzh{中文摘要关键词}%中文摘要关键词
-\keyworden{English\qquad template}%英文摘要关键词
+%摘要关键词：本科研究生都需要填写！
+\keywordzh{中文摘要关键词} %中文摘要关键词，词间间隔3格，用{ }{ }{ }实现，方法不唯一
+\keyworden{English\qquad template} %外文摘要关键词，互相之间间隔3格
 
 
 %
@@ -83,7 +82,7 @@
 \include{chap/chapter1}
 \include{chap/chapter2}
 \include{chap/chapter3}
-\input{chap/chapter4}%要插入本科签名的最后一个章节,插入命令使用\input{}
+\input{chap/chapter4} %要插入本科签名的最后一个章节,插入命令使用\input{}
 
 %本科签名
 \autograph
