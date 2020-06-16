@@ -1,0 +1,53 @@
+\begin{thebibliography}{8}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI: #1}\else
+  \providecommand{\doi}{DOI: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Knuth~et~al.(1986)Knuth and Bibby]{knuth1986texbook}
+KNUTH D E, BIBBY D.
+\newblock The texbook: volume 1993[M].
+\newblock [S.l.]: Addison-Wesley Reading, Mass., 1986.
+
+\bibitem[Patashnik(1988)]{patashnik1988designing}
+PATASHNIK O.
+\newblock Designing BIBTEX styles[M].
+\newblock [S.l.]: February, 1988.
+
+\bibitem[Lamport(1985)]{lamport1985i1}
+LAMPORT L.
+\newblock I1 (\LaTeX)---A Document: volume 410[M].
+\newblock [S.l.]: pub-AW, 1985.
+
+\bibitem[Patashnik(2010)]{patashnik2010designing}
+PATASHNIK O.
+\newblock Designing BIBTEX styles. btxhak. pdf, [S.l.], 2010.
+
+\bibitem[陈浩元(2005)]{陈浩元2005著录文后参考文献的规则及注意事项}
+陈浩元.
+\newblock 著录文后参考文献的规则及注意事项[J].
+\newblock 编辑学报.
+\newblock 2005, 17 (6): 413--415.
+
+\bibitem[Oetiker~et~al.(2011)Oetiker, Partl, Hyna, Schlegl, Oetiker, Partl,
+  Hyna, and Schlegl]{Oetiker2011The}
+OETIKER T, PARTL H, HYNA I, et~al.
+\newblock The not so short introduction to latex2ε or l atex 2ε in 139
+  minutes[J].
+\newblock Myweb.wit.edu.
+\newblock 2011.
+
+\bibitem[Goossens(1993)]{Goossens1993The}
+GOOSSENS M.
+\newblock The latex companion[J].
+\newblock Annual Acm Symposium on Principles of Distributed Computing.
+\newblock 1993, 66 (3): 985–986.
+
+\bibitem[Reckdahl(1997)]{Reckdahl1997Using}
+RECKDAHL K.
+\newblock Using imported graphics in latex2e[J].
+\newblock World Wide Web Site Version.
+\newblock 1997.
+
+\end{thebibliography}
