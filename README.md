@@ -1,69 +1,48 @@
-> 如果没有像我一样的特殊爱好，同学们还是最好使用MS Word来写毕业论文。
+> 如果没有像我一样的特殊爱好，同学们还是最好使用 Word来写毕业论文。
 > 符合学校和老师的模板就是好模板。
-> 我的一个观点是，文件里面的注释要和代码一样长。代码需要经常阅读，偶尔执行。
+> 我的一个观点是，文件里面的注释要和代码一样长。代码需要经常阅读，偶尔执行。如果你做不到这一点，那么就意味着代码永远处于不可维护状态。
+> 我认为学习是一个类似沙土在河流中沉淀的过程。在激流中，狂想式的浮光片影是无法落入河底的，河流往前走，不断赋予事物的结果一定的意义，这就是事物的重量。赋予事务意义的需要为之付诸时间，精力，但最重要的是标记。人类是善忘的动物，我们必须随着标记才能找到回家的路。
+> 临近毕业，发邮件提问的学弟学妹越来越多了，但一个人的精力有限，有些问题是重复的，有的问题涉及的细节很多。更希望大家开[issue](https://github.com/GH1995/RUC-thesis-template-for-LaTeX/issues)讨论，或者直接发PR给我，这样可以帮助更多的人。
 
-# 中国人民大学LaTeX论文模板——不要担心，这个项目可以运行
+# 中国人民大学LaTeX论文模板——不要担心，这个项目一定可以运行
 
-   * [中国人民大学LaTeX论文模板——不要担心，这个项目可以运行](#中国人民大学latex论文模板不要担心这个项目可以运行)
-      * [字体文件](#字体文件)
-      * [Ubuntu安装LaTeX](#ubuntu安装latex)
-      * [使用的宏包（没问题就忽略）](#使用的宏包没问题就忽略)
-      * [想编译模板文件和生成手册的可以执行下述代码](#想编译模板文件和生成手册的可以执行下述代码)
-         * [生成模板文件ructhesis.cls](#生成模板文件ructhesiscls)
-         * [生成手册ructhesis.pdf](#生成手册ructhesispdf)
-      * [在Windows下编译](#在windows下编译)
-      * [在Ubuntu下用Tex Studio编译](#在ubuntu下用tex-studio编译)
-      * [如果你也和我一样使用vim，这里给你准备了插件和推荐配置](#如果你也和我一样使用vim这里给你准备了插件和推荐配置)
-      * [结束](#结束)
-
----
-
-**Tips:** 临近毕业，发邮件提问的学弟学妹越来越多了，但一个人的精力有限，有些问题是重复的，有的问题涉及的细节很多。更希望大家开[issue](https://github.com/GH1995/RUC-thesis-template-for-LaTeX/issues)讨论，或者直接发PR给我，这样可以帮助更多的人。
-
-目前支持本科、硕士（学硕+专硕）和博士
+目前支持本科、硕士（学硕+专硕）和博士，排版出来的封面和下面差不多
 
 ![example](./figures/Snipaste_2020-06-17_03-55-47.png)
 
-如果已经有`ructhesis.cls`文件的可以直接使用. 目前的版本使用了[2015国标](https://github.com/ustctug/gbt-7714-2015)的参考文献样式.
+如果已经有`ructhesis.cls`文件的可以直接使用。目前的版本使用了[2015国标](https://github.com/ustctug/gbt-7714-2015)的参考文献样式.
 
-这里我们使用`xelatex`作为排版引擎，第一步编译`main.tex`文件，第二步处理参考文献，然后再编译两遍生成`pdf`文件.
+这里我们使用`xelatex`作为排版引擎，这里不建议大家选用其他引擎，比如`pdflatex`之类的，一个原因是这些引擎对于中文的支持不太好，另外`xelatex`更新也比较快。至于网上抱怨的`xelatex`编译性能的问题，实际上我们要知道，一个需要1s编译完成，另一个需要2s，关注这种差别没有意义。
 
-```shell
-$ xelatex main.tex
-$ bibtex main.tex
-$ xelatex main.tex
-$ xelatex main.tex
-```
+还需要提醒的一点是，我们推荐你使用 Linux，因为无论是MacTex还是Windows上的TexLive安装都容易出错。你会为了排查这种错误而浪费大量的时间。
 
-**重要信息**
+我们推荐使用`UTF-8`编码，请拒绝GBK，GB2312和BOM等编码。很不幸的是 Windows 上的默认编码不是 `UTF-8`的，我们推荐你使用`vim/emacs`，Visual Code 或者 Sublime Text  作为编辑工具。这里面我们已经为 vim 配置好了 LaTeX 写作环境，推荐你使用[它](https://github.com/GH1995/vimrc)。
 
-- 编辑器要用`UTF-8`的编码要不然你打开是乱码
-- 排版引擎使用`xelatex`，要不然会报错
-
----
 
 ## 字体文件
 
-| 字体              | PostScript名称      |
-|-------------------|---------------------|
-| `Times New Roman` | `TimesNewRomanPSMT` |
-| `Arial`           | `ArialMT`           |
-| `Courier New`     | `CourierNewPSMT`    |
-| `宋体`            | `SimSun`            |
-| `黑体`            | `SimHei`            |
-| `仿宋`            | `FangSong`          |
-| `方正小标宋`      | `FZXBSJW–GB1-0`     |
+如果你使用Ubuntu，极有可能是欠缺一部分关键字体，但是不用担心，我们已经打包好了，可以从[这里](http://pan.baidu.com/s/1eRFJXnW)下载。鉴于百度云的速度实在太慢，建议比较着急的用户直接按字体的名称搜索下载即可。我个人比较喜欢把字体安装在，自己的工作目录下，这样不会和别人共享字体，但是也避免干扰全局环境。记得安装好之后更新一下字体缓存。
 
-可以从[这里](http://pan.baidu.com/s/1eRFJXnW)下载
+- `Times New Roman`
+- `Arial`
+- `Courier New`
+- `宋体`
+- `黑体`
+- `仿宋`
+- `方正小标宋`
+
 
 ## Ubuntu安装LaTeX
+
+如果你已经安装好了字体，其实没有安装好也没关系，我们这样就要安装 LaTeX 了。如果你用百度搜索，可能会有些人告诉你那些包需要安装，那些不需要安装，这样可以节省空间。我个人相信人大的学生硬盘还没有这么促狭，我们直接安装了所有 LaTeX 依赖，大概需要 5GB左右的空间，这样可以避免以后的口水官司。
+
 ```shell
 sudo apt install texlive-full
 ```
 
 ## 使用的宏包（没问题就忽略）
 
-全部都是TeX Live自带的
+这部分可以全部忽略，因为我们使用的 tex 包全部都是TeX Live自带的。
 
 - `ctexbook`
 - `geometry`
@@ -78,22 +57,25 @@ sudo apt install texlive-full
 - `color`
 - `pstricks`
 
-## 想编译模板文件和生成手册的可以执行下述代码
+## 如果你也和我一样使用vim，这里给你准备了插件和推荐配置（这个是我们推荐的）
 
-### 生成模板文件`ructhesis.cls`
-`$ latex ructhesis.ins`
+安装`lervag/vimtex`，配置参考[这里](https://github.com/GH1995). `cp dotfile/latexmkrc ~/.latexmkrc`，`vimtex`的配置可以直接使用[这个](https://github.com/GH1995/vimrc/blob/master/config/vimtex.vim).
 
-### 生成手册`ructhesis.pdf`
+如果你和我一样使用终端写代码，这样是无法直接查看pdf的。每次编译完成之后再拷贝出来过于麻烦，我们在工作目录下执行这条命令就可以建一个 web 服务器。
 
-- `$ xelatex ructhesis.dtx`
-- `$ makeindex -s gind.ist -o ructhesis.ind ructhesis.idx `
-- `$ makeindex -s gglo.ist -o ructhesis.gls ructhesis.glo `
-- `$ xelatex ructhesis.dtx`
-- `$ xelatex ructhesis.dtx`
+```sh
+python3 -m http.sever port
+```
+现在你就可以在浏览器里查看了，我们建议你使用浏览器的无痕模式，不会缓存pdf，可以立即看到更新。配置好的vim的用法如下：
 
----
+| 按键  | 用法            |
+|------:|:----------------|
+| `\ll` | 编译            |
+| `\lv` | 查看pdf         |
+| `\lc` | 清理，保留pdf   |
+| `\lC` | 清理，不保留pdf |
 
-## 在Windows下编译
+## 在Windows下使用（可以但是不推荐）
 
 1. 安装[Tex Live](http://www.tug.org/texlive). 把`bin`目录例如`D:\texlive\2016\bin\win32`加入`PATH`环境变量.
 2. 安装字体. [下载地址](http://pan.baidu.com/s/1eRFJXnW)，有的字体Windows自带了，有的字体Ubuntu自带了，但都不全，还是一次性安装完所有字体比较方便.
@@ -106,7 +88,7 @@ sudo apt install texlive-full
     - `PDF Viewer`改为`Internal PDF Viewer(windowed)`，这样预览时会弹出一个独立的窗口，这样比较方便
 5. 编译. 用`TeX Studio`打开`main.tex`，点击界面上的绿色箭头就可以开始编译了. 在下方的窗口可以看到`TeX Studio`正在使用的编译命令是`xelatex -synctex=1 -interaction=nonstopmode "main".tex`
 
-## 在Ubuntu下用Tex Studio编译
+## 在Ubuntu下用Tex Studio编译（可以但是没必要）
 1. `sudo apt install texlive`
 2. 安装字体. `mkdir ~/.fonts && cd ~/.fonts`, 把下载好的字体解压复制到这个文件夹，然后`fc-cache -f -v`；
 3. 安装`sudo apt install texstudio`
@@ -118,20 +100,9 @@ sudo apt install texlive-full
     - `PDF Viewer` 改为 `Internal PDF Viewer(windowed)`，这样预览时会弹出一个独立的窗口，这样比较方便.
 5. 编译. 用`TeX Studio`打开`main.tex`，点击界面上的绿色箭头就可以开始编译了. 在下方的窗口可以看到`TeX Studio`正在使用的编译命令是`xelatex -synctex=1 -interaction=nonstopmode "main".tex`
 
-## 如果你也和我一样使用vim，这里给你准备了插件和推荐配置
-
-安装`lervag/vimtex`，配置参考[这里](https://github.com/GH1995). `cp dotfile/latexmkrc ~/.latexmkrc`，`vimtex`的配置可以直接使用[这个](https://github.com/GH1995/vimrc/blob/master/config/vimtex.vim).
-
-
-| 按键  | 用法            |
-|------:|:----------------|
-| `\ll` | 编译            |
-| `\lv` | 查看pdf         |
-| `\lc` | 清理，保留pdf   |
-| `\lC` | 清理，不保留pdf |
-
-
 ## 结束
 
-如果你厌恶了**error**，发邮件给我吧。 tulingjiaoyu#126.com
+如果你厌恶了**error**，发邮件给我吧，我可能不会回复。 tulingjiaoyu#126.com
 
+
+看到这里的你，是不是处在撰写毕业论文的初期。这时候的你是不是和我一样焦虑，担心，担心答辩，担心延毕。我想告诉你，不要担心，拉长了人生尺度来看，这两个月的苦恼算不得什么。请记得一定要好好和人大，和喜欢的女孩男孩，说声再见。萍水相逢，再聚就是关山难越。毕业是绿瓦红砖的校园，是过去和现在的告别，放首缓慢的歌，轻轻打开电脑，慢慢和我们的人大告别，告别明法台阶上每一个值得纪念的傍晚和深夜。
