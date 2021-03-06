@@ -8,7 +8,8 @@
 > 临近毕业，发邮件提问的学弟学妹越来越多了，但一个人的精力有限，有些问题是重复的，有的问题涉及的细节很多。更希望大家开[issue](https://github.com/GH1995/RUC-thesis-template-for-LaTeX/issues)讨论，或者直接发PR给我，这样可以帮助更多的人。
 
 
-目前支持本科、硕士（学硕+专硕）和博士，排版出来的封面和下面差不多
+目前支持本科、硕士（学硕+专硕）和博士，排版出来的封面和下面差不多，可以在 [overleaf](https://www.overleaf.com/read/kmjxwrcjstqx
+) 上直接预览 
 
 ![example](./figures/Snipaste_2020-06-17_03-55-47.png)
 
