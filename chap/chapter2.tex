@@ -1,46 +1,48 @@
 \chapter{\RUCThesis\ 介绍}
+\epigraph{揭谛揭谛，波罗揭谛，波罗僧揭谛，菩提萨婆诃。}{般若波罗蜜多心经}
+
 \section{必要的宏包}
 本模板中包含的宏包如下表所示：
 \begin{table}[htb]
-	\centering
-	\begin{minipage}[t]{0.8\linewidth} 
-	\caption[必要宏包]{本模板中包含的宏包，当然这些必须安装。其实这些在你的\LaTeX\ 里面已经有了。其实这还是一个简单三线表的例子，其实这还是一个长表格标题的例子，当然还是一个表格中插脚注的例子}
-	\label{tab:template-files}
-	\begin{tabular*}{\linewidth}{cccccc}
-	\toprule[1.5pt]
-	\multicolumn{6}{c}{\sf 宏包文件}\\ \midrule[1pt] 
-	ctexbook & geometry & hyperref & graphicx\footnote{插图宏包} & titletoc & ifxetex \\ 
-	ifthen  & calc & lscape\footnote{页面横向放置宏包}   & multicol & color   & pstricks\\
-	\bottomrule[1.5pt]
-	\end{tabular*}
-	\end{minipage}
+    \centering
+    \begin{minipage}[t]{0.8\linewidth}
+        \caption[必要宏包]{本模板中包含的宏包，当然这些必须安装。其实这些在你的\LaTeX\ 里面已经有了。其实这还是一个简单三线表的例子，其实这还是一个长表格标题的例子，当然还是一个表格中插脚注的例子}
+        \label{tab:template-files}
+        \begin{tabular*}{\linewidth}{cccccc}
+            \toprule[1.5pt]
+            \multicolumn{6}{c}{\sf 宏包文件}\\ \midrule[1pt]
+            ctexbook & geometry & hyperref & graphicx\footnote{插图宏包} & titletoc & ifxetex \\
+            ifthen  & calc & lscape\footnote{页面横向放置宏包}   & multicol & color   & pstricks\\
+            \bottomrule[1.5pt]
+        \end{tabular*}
+    \end{minipage}
 \end{table}
 \section{必要的字体}
 字体命令为{\tt\textbackslash rm}衬线字{\tt\textbackslash sf}非衬线字{\tt\textbackslash tt}等线体。\par
 本模板中包含的字体如下表所示：
 \begin{longtable}[c]{c*{2}{l}}
-\caption{必要的字体}\label{tab:performance}\\
-\toprule[1.5pt]
-字体 & PostScript名称\\\midrule[1pt]
-\endfirsthead
-\caption[]{必要的字体(续)}\\
-\toprule[1.5pt]
- 字体 & PostScript名称\\\midrule[1pt]
-\endhead
-\hline
-\multicolumn{2}{r}{续下页}
-\endfoot
-\endlastfoot
- Times New Roman & TimesNewRomanPSMT \\
-Arial &  ArialMT \\
-Courier New & CourierNewPSMT\\
- 宋体 & SimSun \\
-黑体 & SimHei \\
- 仿宋 & FangSong \\
- 方正小标宋\footnotemark & FZXBSJW–GB1-0 \\
-\bottomrule[1.5pt]
+    \caption{必要的字体}\label{tab:performance}\\
+    \toprule[1.5pt]
+    字体 & PostScript名称\\\midrule[1pt]
+    \endfirsthead
+    \caption[]{必要的字体(续)}\\
+    \toprule[1.5pt]
+    字体 & PostScript名称\\\midrule[1pt]
+    \endhead
+    \hline
+    \multicolumn{2}{r}{续下页}
+    \endfoot
+    \endlastfoot
+    Times New Roman & TimesNewRomanPSMT \\
+    Arial &  ArialMT \\
+    Courier New & CourierNewPSMT\\
+    宋体 & SimSun \\
+    黑体 & SimHei \\
+    仿宋 & FangSong \\
+    方正小标宋\footnotemark & FZXBSJW–GB1-0 \\
+    \bottomrule[1.5pt]
 \end{longtable}
-\footnotetext{只有在制作封皮的{\tt cover.tex}中用到。} 
+\footnotetext{只有在制作封皮的{\tt cover.tex}中用到。}
 
 
 \section{编译源文件}
@@ -64,48 +66,48 @@ Courier New & CourierNewPSMT\\
 下图的文件是完整的{\tt RUCThesis}文件，同时下图也是横放大表格或者图片的例子。
 
 \begin{landscape}
-\begin{figure}[htbp]
-\centering
-\tikzstyle{every node}=[anchor=west]
-\begin{tikzpicture}[%
-  grow via three points={one child at (0.5,-0.7) and
-  two children at (0.5,-0.7) and (0.5,-1.4)},
-  edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
-  \node {\RUCThesis\ }
-child { node {chap}
-    	child { node {chapter1.tex\quad \% 章节文件}}
-      	child { node {...}}
-      	child { node {appendix\_{}1.tex\quad \% 附录}}} 
-child [missing] {} 
-child [missing] {} 
-child [missing] {}
-child { node {cover.tex\quad \% 封面文件}}
-child { node {figures}
-	child { node {logo.pdf\quad \% 图像}}
-	child { node {...}}}
-child [missing] {} 
-child [missing] {} 
-child { node {format}
-    	child { node {acknowledge.tex\quad \% 致谢}}
-      	child { node {authorization.tex\quad \% 授权书影印件}}
-      	child { node {cabstractpage.tex\quad \% 中文摘要}}
-	child { node {eabstractpage.tex\quad \% 英文摘要}}
-      	child { node {Originality.tex\quad \% 独创性声明}}} 
-child [missing] {} 
-child [missing] {} 
-child [missing] {}
-child [missing] {} 
-child [missing] {} 
-child { node {main.tex\quad \% 主文件}}
-child { node {ref}
-	child { node {ruc.bst\quad \% 参考文献样式}}
-	child { node {yourbib.bib\quad \% 参考文献数据库}}}
-child [missing] {} 
-child [missing] {} 
-child { node {ructhesis.cls\quad \% \RUCThesis\ 文档类}};
-\end{tikzpicture}
-\caption{\RUCThesis\ 文件目录} 
-\end{figure}
+    \begin{figure}[htbp]
+        \centering
+        \tikzstyle{every node}=[anchor=west]
+        \begin{tikzpicture}[%
+                grow via three points={one child at (0.5,-0.7) and
+            two children at (0.5,-0.7) and (0.5,-1.4)},
+            edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}]
+            \node {\RUCThesis\ }
+            child { node {chap}
+            child { node {chapter1.tex\quad \% 章节文件}}
+            child { node {...}}
+            child { node {appendix\_{}1.tex\quad \% 附录}}}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child { node {cover.tex\quad \% 封面文件}}
+            child { node {figures}
+            child { node {logo.pdf\quad \% 图像}}
+            child { node {...}}}
+            child [missing] {}
+            child [missing] {}
+            child { node {format}
+            child { node {acknowledge.tex\quad \% 致谢}}
+            child { node {authorization.tex\quad \% 授权书影印件}}
+            child { node {cabstractpage.tex\quad \% 中文摘要}}
+            child { node {eabstractpage.tex\quad \% 英文摘要}}
+            child { node {Originality.tex\quad \% 独创性声明}}}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child [missing] {}
+            child { node {main.tex\quad \% 主文件}}
+            child { node {ref}
+            child { node {ruc.bst\quad \% 参考文献样式}}
+            child { node {yourbib.bib\quad \% 参考文献数据库}}}
+            child [missing] {}
+            child [missing] {}
+            child { node {ructhesis.cls\quad \% \RUCThesis\ 文档类}};
+        \end{tikzpicture}
+        \caption{\RUCThesis\ 文件目录}
+    \end{figure}
 \end{landscape}
 
 

@@ -1,0 +1,11 @@
+PWD /tmp/RUC-thesis-template-for-LaTeX/chap
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/xetex/xelatex.fmt
+INPUT chapter2.tex
+OUTPUT chapter2.log
+INPUT /usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd

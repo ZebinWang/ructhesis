@@ -5,27 +5,27 @@
 %% The original source files were:
 %%
 %% ructhesis.dtx  (with options: `cls')
-%%  Copyright (C) 2014--2016 Zebin Wang <me@zebinwang.com>
-%%  --------------------------------------------------------------------------
+%% Copyright (C) 2014--2020 Zebin Wang <me@zebinwang.com>
+%% --------------------------------------------------------------------------
 %% 
-%%  This work may be distributed and/or modified under the
-%%  conditions of the LaTeX Project Public License, either
-%%  version 1.3c of this license or (at your option) any later
-%%  version. This version of this license is in
-%%     http://www.latex-project.org/lppl/lppl-1-3c.txt
-%%  and the latest version of this license is in
-%%     http://www.latex-project.org/lppl.txt
-%%  and version 1.3 or later is part of all distributions of
-%%  LaTeX version 2005/12/01 or later.
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either
+%% version 1.3c of this license or (at your option) any later
+%% version. This version of this license is in
+%% http://www.latex-project.org/lppl/lppl-1-3c.txt
+%% and the latest version of this license is in
+%% http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of
+%% LaTeX version 2005/12/01 or later.
 %% 
-%%  This work has the LPPL maintenance status `maintained'.
+%% This work has the LPPL maintenance status `maintained'.
 %% 
-%%  The Current Maintainers of this work is Zebin Wang.
+%% The Current Maintainers of this work is Zebin Wang.
 %% 
-%%  This work consists of the files RUCThesis.dtx and RUCThesis.ins
-%%  and the derived file RUCThesis.cls.
+%% This work consists of the files RUCThesis.dtx and RUCThesis.ins
+%% and the derived file RUCThesis.cls.
 %% 
-%%  --------------------------------------------------------------------------
+%% --------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{ructhesis}[2015/12/01 v1.0.0]
 \newif\ifruc@bachelor
@@ -85,9 +85,9 @@ pdftitle={\@title},
 pdfauthor={\@author},
 pdfsubject={中国人民大学学位论文}}
 }
-\setmainfont{TimesNewRomanPSMT}
-\setsansfont{ArialMT}
-\setmonofont{CourierNewPSMT}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont{Courier New}
 \xeCJKsetup{AutoFakeSlant={true}}
 \setCJKmainfont{SimSun}
 \setCJKsansfont{SimHei}
