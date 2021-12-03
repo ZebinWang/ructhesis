@@ -1,6 +1,5 @@
 ![image](https://user-images.githubusercontent.com/11362493/144565641-926c4828-1c56-486f-94cc-4b7d14afb3c8.png)
 
-![Alt](https://repobeats.axiom.co/api/embed/178d62098f91e5a8b1c3439855fa0ec5cae1f803.svg "Repobeats analytics image")
 
 
 ## 中国人民大学 LaTeX 论文模板
@@ -73,3 +72,4 @@ sudo apt install texlive-full
 5. 编译. 用`TeX Studio`打开`main.tex`，点击界面上的绿色箭头就可以开始编译了. 在下方的窗口可以看到`TeX Studio`正在使用的编译命令是`xelatex -synctex=1 -interaction=nonstopmode "main".tex`
 
 
+![Alt](https://repobeats.axiom.co/api/embed/178d62098f91e5a8b1c3439855fa0ec5cae1f803.svg "Repobeats analytics image")
