@@ -31,7 +31,7 @@ sudo apt install texlive-full
 
 ## vscode + Mac/Linux(recommand)
 
-我目前采用的[方案](https://yangyq.net/2022/05/latex-with-visual-studio-code.html)
+我目前采用的[方案](https://yangyq.net/2022/05/latex-with-visual-studio-code.html)，[视频教程](https://www.bilibili.com/video/BV1Y34y1r7jH/)
 
 ## 在Ubuntu下用Tex Studio编译(not recommand)
 
