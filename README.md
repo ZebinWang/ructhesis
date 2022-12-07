@@ -17,11 +17,9 @@
 
 如果已经有`ructhesis.cls`文件的可以直接使用。目前的版本使用了[2015国标](https://github.com/ustctug/gbt-7714-2015)的参考文献样式.
 
-本模版使用`xelatex`作为排版引擎，推荐使用 overleaf 或 Linux，因为无论是 MacTex 还是 Windows 上的 TexLive 安装都容易出错。
+本模版使用`xelatex`作为排版引擎，推荐使用 overleaf 或 Linux/MacOS，因为无论是 MacTex 还是 Windows 上的 TexLive 安装都容易出错。
 
-## 字体文件
-
-Ubuntu 欠缺一部分字体，为此我们提供[这里（不是百度网盘）](https://ruc.lanzouo.com/inJo9xec09i)以供下载。
+您可能欠缺一部分字体，为此我们提供[这里（不是百度网盘）](https://ruc.lanzouo.com/inJo9xec09i)以供下载。
 
 ## Ubuntu 安装 LaTeX
 
@@ -32,19 +30,6 @@ sudo apt install texlive-full
 ## vscode + Mac/Linux(recommand)
 
 我目前采用的[方案](https://yangyq.net/2022/05/latex-with-visual-studio-code.html)，[视频教程](https://www.bilibili.com/video/BV1Y34y1r7jH/)
-
-## 在Ubuntu下用Tex Studio编译(not recommand)
-
-1. `sudo apt install texlive`
-2. 安装字体. `mkdir ~/.fonts && cd ~/.fonts`, 把下载好的字体解压复制到这个文件夹，然后`fc-cache -f -v`；
-3. 安装`sudo apt install texstudio`
-4. 配置`TeX Studio`
-    - 启动`TeX Studio`，选择 `Options-->Configure Texstudio-->Commands`，`xelatex` 设置为 `xelatex -synctex=1 -interaction=nonstopmode %.tex`；
-    - 选择 `Options-->Configure Texstudio-->Build`
-    - `Build & View` 由默认的 `PDF Chain` 改为 `Compile & View`
-    - `Default Compiler` 由默认的`pdflatex` 修改为 `xelatex`
-    - `PDF Viewer` 改为 `Internal PDF Viewer(windowed)`，这样预览时会弹出一个独立的窗口，这样比较方便.
-5. 编译. 用`TeX Studio`打开`main.tex`，点击界面上的绿色箭头就可以开始编译了. 在下方的窗口可以看到`TeX Studio`正在使用的编译命令是`xelatex -synctex=1 -interaction=nonstopmode "main".tex`
 
 
 ![Alt](https://repobeats.axiom.co/api/embed/178d62098f91e5a8b1c3439855fa0ec5cae1f803.svg "Repobeats analytics image")
