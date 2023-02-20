@@ -1,68 +1,35 @@
-# RUCThesis  
-##中国人民大学LaTeX论文模板
-
-目前支持本科、硕士（学硕+专硕）和博士
-
-**如果已经有ructhesis.cls文件的可以直接使用。**  
-**目前的版本使用了[2015国标](https://github.com/ustctug/gbt-7714-2015)的参考文献样式。**   
-在main.tex文件下使用如下命令：  
-
-这里我们使用xelatex作为排版引擎，第一步编译main.tex文件，第二步处理参考文献，然后再编译两遍生成pdf文件。
-
-`$ xelatex main.tex`  
-`$ bibtex main.tex`  
-`$ xelatex main.tex`  
-`$ xelatex main.tex` 
-
-##重要信息  
-**1、编辑器要用UTF-8的编码要不然你打开是乱码。**  
-**2、排版引擎使用XeLaTeX，要不然会报错。**  
+![image](https://user-images.githubusercontent.com/11362493/144565641-926c4828-1c56-486f-94cc-4b7d14afb3c8.png)
 
 
-###必要的字体文件
 
-字体 | PostScript名称 
------------- | ------------- 
-Times New Roman | TimesNewRomanPSMT  
-Arial | ArialMT
-Courier New | CourierNewPSMT
-宋体 | SimSun
-黑体 | SimHei
-仿宋 | FangSong
+## 中国人民大学 LaTeX 论文模板
+
+不要担心，这个项目一定可以运行
+
+> 符合学校和老师的模板就是好模板，你需要仔细的考虑自己是否需要LaTeX，其实 Word 也是不错的软件。
+
+> 临近毕业，发邮件提问的学弟学妹越来越多了，希望大家开[issue](https://github.com/GH1995/RUC-thesis-template-for-LaTeX/issues)讨论，或者直接发PR，这样可以帮助更多的人。
 
 
-**需要生成封皮的还需要自行下载安装**  
+目前支持本科、硕士（学硕+专硕）和博士，排版出来的封面和下面差不多，可以在 [overleaf](https://www.overleaf.com/read/kmjxwrcjstqx) 上直接预览 
 
-- 方正小标宋           PostScript名称:FZXBSJW–GB1-0
+<img src="./figures/Snipaste_2020-06-17_03-55-47.png" height="500rem" alt="example" align=center />
 
-###必要的宏包
+如果已经有`ructhesis.cls`文件的可以直接使用。目前的版本使用了[2015国标](https://github.com/ustctug/gbt-7714-2015)的参考文献样式.
 
-**全部都是TeX Live自带的**
-- ctexbook
-- geometry
-- hyperref
-- graphicx
-- titletoc
-- ifxetex
-- ifthen
-- calc
-- lscape
-- multicol
-- color
-- pstricks
+本模版使用`xelatex`作为排版引擎，推荐使用 overleaf 或 Linux/MacOS，因为无论是 MacTex 还是 Windows 上的 TexLive 安装都容易出错。
 
-###想编译模板文件和生成手册的可以执行下述代码
-生成模板文件ructhesis.cls  
-`$ latex ructhesis.ins`  
-生成手册ructhesis.pdf  
-`$ xelatex ructhesis.dtx`  
-`$ makeindex -s gind.ist -o ructhesis.ind ructhesis.idx `  
-`$ makeindex -s gglo.ist -o ructhesis.gls ructhesis.glo `  
-`$ xelatex ructhesis.dtx`  
-`$ xelatex ructhesis.dtx`  
+您可能欠缺一部分字体，为此我们提供[这里（不是百度网盘）](https://ruc.lanzouo.com/inJo9xec09i)以供下载。
 
-###联系  
-如果模板本身的问题可以上[GitHub](https://github.com/ZebinWang/ructhesis)上发篇issue。   
+## Ubuntu 安装 LaTeX
 
-如果想贡献代码的请email我: <me@zebinwang.com> 
+```shell
+sudo apt install texlive-full
+```
 
+## vscode + Mac/Linux(recommand)
+
+我目前采用的[方案](https://yangyq.net/2022/05/latex-with-visual-studio-code.html)，[视频教程](https://www.bilibili.com/video/BV1Y34y1r7jH/)
+
+
+![Alt](https://repobeats.axiom.co/api/embed/178d62098f91e5a8b1c3439855fa0ec5cae1f803.svg "Repobeats analytics image")
